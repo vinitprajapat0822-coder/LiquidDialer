@@ -1,6 +1,7 @@
 package com.vinit.liquiddialer.di
 
 import android.content.Context
+import com.vinit.liquiddialer.data.repository.CallLogRepository
 import com.vinit.liquiddialer.data.repository.ContactRepository
 import dagger.Module
 import dagger.Provides
@@ -18,4 +19,10 @@ object AppModule {
     fun provideContactRepository(
         @ApplicationContext context: Context
     ): ContactRepository = ContactRepository(context)
+
+    @Provides
+    @Singleton
+    fun provideCallLogRepository(
+        @ApplicationContext context: Context
+    ): CallLogRepository = CallLogRepository(context)
 }

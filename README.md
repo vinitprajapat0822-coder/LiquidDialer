@@ -1,52 +1,55 @@
 # LiquidDialer
 
-**Free liquid-glass Android dialer** (clean-room rebuild of PhoneX core).
+Free liquid-glass Android dialer (clean-room rebuild of PhoneX core features).
 
-- No ads · No subscription · All themes unlocked
+**No ads · No subscription**
 
 ---
 
-## ZIP Download
+## ZIP Download (latest source)
 
 **https://github.com/vinitprajapat0822-coder/LiquidDialer/archive/refs/heads/main.zip**
 
 ---
 
-## Status
+## Status (honest)
 
-| Feature                        | Status      |
-|--------------------------------|-------------|
-| Project scaffold               | ✅          |
-| Default dialer role request    | ✅          |
-| Glass-style keypad + call      | ✅          |
-| Liquid Glass Call Screen       | ✅          |
-| Slide-to-answer                | ✅          |
-| CallActivity + InCallService   | ✅          |
-| **Contacts loading**           | ✅ **New**  |
-| **Live T9 search**            | ✅ **New**  |
-| Call log + Block list          | ⏳ Next     |
-| Flash / Announcer / Themes     | ⏳ Later    |
+| Feature                      | Status |
+|-----------------------------|--------|
+| Scaffold + permissions      | ✅     |
+| Default dialer role         | ✅     |
+| Glass keypad + place call   | ✅     |
+| Liquid Glass Call Screen    | ✅     |
+| Slide-to-answer             | ✅     |
+| Contacts + live T9          | ✅     |
+| Recents / Call Log          | ✅     |
+| Bottom nav (Dialer/Recents) | ✅     |
+| Block list / Flash / Themes | ⏳ not done |
+| Dual-SIM / Fake call        | ⏳ not done |
 
----
-
-## Hindi – जल्दी सेटअप
-
-1. ZIP डाउनलोड: ऊपर वाला लिंक
-2. Extract → Android Studio में खोलो
-3. Sync → Run
-4. **Contacts permission** allow करो
-5. **Default Dialer** सेट करो
-
-कीपैड पर नंबर टाइप करते ही T9 suggestions आने चाहिए।
+This is a working core, not 100% PhoneX clone.
 
 ---
 
-## English
+## APK कैसे बनाएँ
 
-```bash
-git clone https://github.com/vinitprajapat0822-coder/LiquidDialer.git
-cd LiquidDialer
-# Open in Android Studio → Run
-```
+यहाँ Android SDK नहीं है → **signed APK यहाँ से नहीं मिल सकती**।
 
-Allow **Contacts** permission. Set as **default dialer**. Type digits → T9 matches appear.
+### Android Studio (सबसे आसान)
+
+1. ZIP डाउनलोड या `git clone https://github.com/vinitprajapat0822-coder/LiquidDialer.git`
+2. Android Studio में फोल्डर खोलो
+3. Gradle Sync
+4. **Build → Build Bundle(s) / APK(s) → Build APK(s)**
+5. APK path: `app/build/outputs/apk/debug/app-debug.apk`
+6. फोन पर copy → install (Unknown sources on)
+
+### Signed release APK
+
+Android Studio → **Build → Generate Signed Bundle / APK** → अपना keystore चुनो।
+
+---
+
+## Permissions
+
+Default dialer, Contacts, Call Log, Phone
