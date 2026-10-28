@@ -1,0 +1,25 @@
+feature,area,priority,original,clone,notes
+Default dialer role + permission onboarding,onboarding,must,yes,no,Android ROLE_DIALER
+T9 live search on keypad,dialer,must,yes,no,Core differentiator
+Speed dial assignment (2-9),dialer,must,yes,no,
+Dual-SIM selector + preference,dialer,must,yes,no,
+Call log with SIM badge + swipe actions,recents,must,yes,no,
+Contacts list + detail + favourites,contacts,must,yes,no,
+Liquid-glass full-screen incoming call UI,callscreen,must,yes,no,
+Slide-to-answer gesture,callscreen,must,yes,no,
+Caller photo / name / number on call screen,callscreen,must,yes,no,
+Spam / robocall badge on unknown numbers,spam,must,yes,no,Needs local replacement
+One-tap block from call screen or log,spam,must,yes,no,
+Block list management,spam,must,yes,no,
+Caller name announcer (TTS),accessibility,must,yes,no,
+Flash-on-call (camera LED pattern),accessibility,must,yes,no,
+In-call controls (mute speaker hold keypad end),incall,must,yes,no,
+Theme gallery + apply instant,themes,must,yes,no,All themes free in clone
+Custom background / own image upload,themes,must,yes,no,
+Quick-reply SMS templates,postcall,must,yes,no,
+Fake-call scheduler,utility,should,yes,no,
+Per-contact ringtone,contacts,should,yes,no,
+Premium subscription / no-ads unlock,monetization,must,yes,skip,Explicitly removed
+Exclusive premium theme packs,themes,should,yes,skip,All themes unlocked
+Ad mediation,monetization,must,yes,skip,Removed
+Google Play Billing,monetization,must,yes,skip,Removed
