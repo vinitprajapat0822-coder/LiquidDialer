@@ -1,81 +1,55 @@
 # LiquidDialer
 
-**Free liquid-glass Android dialer** (clean-room rebuild of PhoneX core features).
+**Free liquid-glass Android dialer** (clean-room rebuild of PhoneX core).
 
-- No ads
-- No subscription
-- All themes unlocked
-- T9 dialer + dual-SIM ready structure
-- Kotlin + Jetpack Compose
+- No ads · No subscription · All themes unlocked
 
 ---
 
-## हिंदी में जल्दी सेटअप
+## ZIP Download
 
-1. GitHub से क्लोन करो:
-   ```bash
-   git clone https://github.com/vinitprajapat0822-coder/LiquidDialer.git
-   cd LiquidDialer
-   ```
-
-2. **Android Studio** में फोल्डर खोलो (Hedgehog या नया)।
-
-3. Gradle sync होने दो (पहली बार इंटरनेट चाहिए)।
-
-4. फोन/एमुलेटर पर Run दबाओ (Android 10+ / API 29+)।
-
-**APK बनाना:**
-```bash
-./gradlew :app:assembleDebug
-```
-APK मिलेगा: `app/build/outputs/apk/debug/app-debug.apk`
+**https://github.com/vinitprajapat0822-coder/LiquidDialer/archive/refs/heads/main.zip**
 
 ---
 
-## English – Quick Start
+## Status (updated)
 
+| Feature                        | Status      |
+|--------------------------------|-------------|
+| Project scaffold               | ✅          |
+| Default dialer role request    | ✅          |
+| Glass-style keypad + call      | ✅          |
+| **Liquid Glass Call Screen**   | ✅ **New**  |
+| **Slide-to-answer**           | ✅ **New**  |
+| CallActivity + InCallService    | ✅ **New**  |
+| T9 Matcher (foundation)        | ✅ **New**  |
+| Contacts loading + live T9     | ⏳ Next     |
+| Call log + Block list          | ⏳ Next     |
+| Flash / Announcer / Themes     | ⏳ Later    |
+
+---
+
+## Hindi – जल्दी सेटअप
+
+1. ZIP डाउनलोड करो (ऊपर लिंक)
+2. Extract करो
+3. Android Studio में खोलो → Sync → Run
+
+या:
 ```bash
 git clone https://github.com/vinitprajapat0822-coder/LiquidDialer.git
 cd LiquidDialer
 ```
 
-Open in **Android Studio** → Sync → Run on device (API 29+).
-
-Or build APK:
+APK:
 ```bash
 ./gradlew :app:assembleDebug
 ```
 
 ---
 
-## Current Status (v0.1.0-slice)
+## Important
 
-| Feature                        | Status      |
-|--------------------------------|-------------|
-| Project scaffold               | ✅ Done     |
-| Default dialer role request    | ✅ Done     |
-| Glass-style keypad + call      | ✅ Done     |
-| InCallService + Screening stubs| ✅ Done     |
-| Full liquid-glass Call Screen  | ⏳ Next     |
-| Contacts + T9 search           | ⏳ Next     |
-| Call log + Block list          | ⏳ Next     |
-| Themes + Flash + Announcer     | ⏳ Later    |
-
-Full plan: see `docs/architecture.md` and `docs/recon.md`
-
----
-
-## Important Notes
-
-- This is a **clean-room rebuild**. Original PhoneX assets / code are **not** included (legal).
-- Works best when set as **default dialer**.
-- Tested structure for Redmi / MIUI (Android 10+).
-- No Google Play Billing, no ads, no premium locks.
-
----
-
-## Repo Link
-
-**https://github.com/vinitprajapat0822-coder/LiquidDialer**
-
-Clone → Open in Android Studio → Build & Run.
+- App को **Default Dialer** बनाना जरूरी है, तभी Call Screen आएगा।
+- यह clean-room rebuild है (मूल PhoneX कोड नहीं)।
+- Contacts + full T9 अगला काम है।
