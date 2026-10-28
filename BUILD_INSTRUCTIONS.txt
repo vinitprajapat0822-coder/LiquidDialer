@@ -1,0 +1,25 @@
+LiquidDialer - Build Debug APK (no errors path)
+
+1. Install Android Studio (Hedgehog or newer) on Windows/Mac.
+2. Open the extracted project folder (File → Open).
+3. When prompted, let it install SDK / accept licenses.
+4. Wait for Gradle Sync to finish (first time needs internet).
+5. Connect phone with USB debugging OR use emulator (API 29+).
+6. Menu: Build → Build Bundle(s) / APK(s) → Build APK(s)
+   OR terminal:
+      ./gradlew :app:assembleDebug
+
+7. Debug APK location:
+   app/build/outputs/apk/debug/app-debug.apk
+
+8. Install:
+   adb install -r app/build/outputs/apk/debug/app-debug.apk
+   OR copy APK to phone and open it.
+
+IMPORTANT:
+- Allow Contacts permission
+- Set LiquidDialer as Default Phone / Dialer app
+- Then test keypad (T9) and incoming call screen
+
+This is a vertical slice + Contacts/T9 + Glass Call Screen.
+Call log, block list, flash, announcer, full themes are not finished yet.

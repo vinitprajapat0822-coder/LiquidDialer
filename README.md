@@ -1,55 +1,35 @@
 # LiquidDialer
 
-Free liquid-glass Android dialer (clean-room rebuild of PhoneX core features).
+Free liquid-glass Android dialer (clean-room rebuild).
 
-**No ads · No subscription**
+**ZIP:** https://github.com/vinitprajapat0822-coder/LiquidDialer/archive/refs/heads/main.zip
 
----
+## Status
 
-## ZIP Download (latest source)
+| Feature | Status |
+|---------|--------|
+| Scaffold + Default dialer | ✅ |
+| Glass keypad | ✅ |
+| Liquid Glass Call Screen + Slide to answer | ✅ |
+| Contacts load | ✅ |
+| Live T9 search | ✅ |
+| Call log / Block list / Flash / Announcer / Themes | ⏳ Not done |
 
-**https://github.com/vinitprajapat0822-coder/LiquidDialer/archive/refs/heads/main.zip**
+## Debug APK kaise banaye (error kam karne ka path)
 
----
+1. ZIP download karke extract karo
+2. **Android Studio** me folder open karo
+3. Gradle Sync hone do (internet chahiye)
+4. **Build → Build APK(s)**
+5. APK yahan milega:
+   `app/build/outputs/apk/debug/app-debug.apk`
 
-## Status (honest)
+Detail: `BUILD_INSTRUCTIONS.txt`
 
-| Feature                      | Status |
-|-----------------------------|--------|
-| Scaffold + permissions      | ✅     |
-| Default dialer role         | ✅     |
-| Glass keypad + place call   | ✅     |
-| Liquid Glass Call Screen    | ✅     |
-| Slide-to-answer             | ✅     |
-| Contacts + live T9          | ✅     |
-| Recents / Call Log          | ✅     |
-| Bottom nav (Dialer/Recents) | ✅     |
-| Block list / Flash / Themes | ⏳ not done |
-| Dual-SIM / Fake call        | ⏳ not done |
+## Important
 
-This is a working core, not 100% PhoneX clone.
+- Contacts permission allow karo
+- App ko **Default Dialer** banao
+- Yahan se ready-made signed APK nahi banaya ja sakta (Android SDK is environment me nahi hai). Source complete vertical slice ke saath GitHub par hai — Studio me open karke debug APK banao.
 
----
-
-## APK कैसे बनाएँ
-
-यहाँ Android SDK नहीं है → **signed APK यहाँ से नहीं मिल सकती**।
-
-### Android Studio (सबसे आसान)
-
-1. ZIP डाउनलोड या `git clone https://github.com/vinitprajapat0822-coder/LiquidDialer.git`
-2. Android Studio में फोल्डर खोलो
-3. Gradle Sync
-4. **Build → Build Bundle(s) / APK(s) → Build APK(s)**
-5. APK path: `app/build/outputs/apk/debug/app-debug.apk`
-6. फोन पर copy → install (Unknown sources on)
-
-### Signed release APK
-
-Android Studio → **Build → Generate Signed Bundle / APK** → अपना keystore चुनो।
-
----
-
-## Permissions
-
-Default dialer, Contacts, Call Log, Phone
+No ads. No subscription.
