@@ -101,7 +101,7 @@ private fun RecentsRow(e: CallLogEntry, onCall: () -> Unit) {
         else -> Icons.Default.Call
     }
     val color = when (e.type) {
-        CallLog.Calls.MISSED_TYPE -> MaterialTheme.colorScheme.primary
+        CallLog.Calls.MISSED_TYPE -> MaterialTheme.colorScheme.error
         else -> MaterialTheme.colorScheme.onSurface
     }
     val time = remember(e.timestamp) {
