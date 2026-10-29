@@ -48,11 +48,11 @@ fun CallScreen(
 
     Box(
         Modifier.fillMaxSize().background(
-            Brush.verticalGradient(listOf(Color(0xFF0B1220), Color(0xFF152238), Color(0xFF0D1B2A)))
+            Brush.verticalGradient(listOf(Color(0xFF07110C), Color(0xFF10281A), Color(0xFF08170F)))
         )
     ) {
-        Box(Modifier.size(280.dp).offset((-40).dp, 80.dp).blur(80.dp).background(Color(0xFF3D5AFE).copy(0.25f), CircleShape))
-        Box(Modifier.size(220.dp).align(Alignment.BottomEnd).offset(40.dp, (-60).dp).blur(70.dp).background(Color(0xFF00E5FF).copy(0.18f), CircleShape))
+        Box(Modifier.size(280.dp).offset((-40).dp, 80.dp).blur(80.dp).background(Color(0xFF39FF88).copy(0.20f), CircleShape))
+        Box(Modifier.size(220.dp).align(Alignment.BottomEnd).offset(40.dp, (-60).dp).blur(70.dp).background(Color(0xFF00E676).copy(0.16f), CircleShape))
 
         Column(
             Modifier.fillMaxSize().padding(horizontal = 24.dp, vertical = 48.dp),
@@ -60,7 +60,7 @@ fun CallScreen(
         ) {
             Text(
                 if (isSpam) "Spam / Suspicious" else "Incoming call",
-                color = if (isSpam) Color(0xFFFF8A80) else Color.White.copy(0.7f),
+                color = if (isSpam) Color(0xFF69F0AE) else Color.White.copy(0.7f),
                 fontSize = 14.sp, fontWeight = FontWeight.Medium
             )
             Spacer(Modifier.height(48.dp))
@@ -73,8 +73,8 @@ fun CallScreen(
             Text(callerNumber, color = Color.White.copy(0.65f), fontSize = 16.sp)
             if (isSpam) {
                 Spacer(Modifier.height(12.dp))
-                Surface(color = Color(0xFFFF5252).copy(0.2f), shape = RoundedCornerShape(20.dp)) {
-                    Text("Possible spam", color = Color(0xFFFF8A80), modifier = Modifier.padding(horizontal = 14.dp, vertical = 6.dp), fontSize = 13.sp)
+                Surface(color = Color(0xFF00E676).copy(0.18f), shape = RoundedCornerShape(20.dp)) {
+                    Text("Possible spam", color = Color(0xFF69F0AE), modifier = Modifier.padding(horizontal = 14.dp, vertical = 6.dp), fontSize = 13.sp)
                 }
             }
             Spacer(Modifier.weight(1f))
@@ -89,7 +89,7 @@ fun CallScreen(
                     Text("Slide to answer", color = Color.White.copy(0.45f), fontSize = 15.sp, modifier = Modifier.align(Alignment.Center))
                     Box(
                         Modifier.offset { IntOffset(dragOffset.roundToInt(), 0) }.size(64.dp).padding(4.dp).clip(CircleShape)
-                            .background(Brush.linearGradient(listOf(Color(0xFF00C853), Color(0xFF69F0AE))))
+                            .background(Brush.linearGradient(listOf(Color(0xFF087F3D), Color(0xFF39FF88))))
                             .pointerInput(Unit) {
                                 detectHorizontalDragGestures(
                                     onDragEnd = { if (dragOffset > maxSlidePx * 0.55f) onAnswer() else dragOffset = 0f },
@@ -105,7 +105,7 @@ fun CallScreen(
             }
 
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.CenterVertically) {
-                Box(Modifier.size(68.dp).clip(CircleShape).background(Color(0xFFFF1744)).clickable { onReject() }, contentAlignment = Alignment.Center) {
+                Box(Modifier.size(68.dp).clip(CircleShape).background(Color(0xFF087F3D)).clickable { onReject() }, contentAlignment = Alignment.Center) {
                     Icon(Icons.Default.CallEnd, "Decline", tint = Color.White, modifier = Modifier.size(30.dp))
                 }
                 Box(Modifier.size(68.dp).clip(CircleShape).background(Brush.linearGradient(listOf(Color(0xFF00C853), Color(0xFF69F0AE)))).clickable { onAnswer() }, contentAlignment = Alignment.Center) {
