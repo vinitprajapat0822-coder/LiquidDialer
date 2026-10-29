@@ -42,8 +42,8 @@ fun SettingsScreen() {
             Text("Theme", style = MaterialTheme.typography.titleMedium)
             listOf(
                 "glass_dark" to "Glass Dark",
-                "glass_blue" to "Glass Blue",
-                "glass_purple" to "Glass Purple"
+                "glass_green" to "Emerald Green",
+                "glass_neon" to "Neon Green"
             ).forEach { (id, label) ->
                 Row(Modifier.fillMaxWidth().padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                     RadioButton(selected = theme == id, onClick = { theme = id; prefs.themeId = id })
