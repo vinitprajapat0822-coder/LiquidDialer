@@ -2,34 +2,38 @@
 
 Free liquid-glass Android dialer (clean-room rebuild).
 
-**ZIP:** https://github.com/vinitprajapat0822-coder/LiquidDialer/archive/refs/heads/main.zip
+**No ads · No subscription · All core features free**
 
-## Status
+## ZIP download
+
+https://github.com/vinitprajapat0822-coder/LiquidDialer/archive/refs/heads/main.zip
+
+## Features included
 
 | Feature | Status |
 |---------|--------|
-| Scaffold + Default dialer | ✅ |
+| Default dialer request (first open) | ✅ |
 | Glass keypad | ✅ |
-| Liquid Glass Call Screen + Slide to answer | ✅ |
-| Contacts load | ✅ |
-| Live T9 search | ✅ |
-| Call log / Block list / Flash / Announcer / Themes | ⏳ Not done |
+| Contacts load + Live T9 | ✅ |
+| Liquid Glass Call Screen | ✅ |
+| Slide to answer | ✅ |
+| Answer + Decline buttons | ✅ |
+| Call log (Recents) | ✅ |
+| Block list | ✅ |
+| Flash on call | ✅ |
+| Caller announcer (TTS) | ✅ |
+| Settings + simple themes | ✅ |
+| Bottom nav | ✅ |
 
-## Debug APK kaise banaye (error kam karne ka path)
+## Debug APK kaise banaye
 
-1. ZIP download karke extract karo
+1. Upar wala ZIP download karke extract karo
 2. **Android Studio** me folder open karo
-3. Gradle Sync hone do (internet chahiye)
+3. Gradle Sync (internet chahiye)
 4. **Build → Build APK(s)**
-5. APK yahan milega:
-   `app/build/outputs/apk/debug/app-debug.apk`
+5. File: `app/build/outputs/apk/debug/app-debug.apk`
+6. Phone me install karo
 
-Detail: `BUILD_INSTRUCTIONS.txt`
+**Zaroori:** Contacts + Call Log + Phone permissions allow karo. App ko **Default Phone / Dialer** banao.
 
-## Important
-
-- Contacts permission allow karo
-- App ko **Default Dialer** banao
-- Yahan se ready-made signed APK nahi banaya ja sakta (Android SDK is environment me nahi hai). Source complete vertical slice ke saath GitHub par hai — Studio me open karke debug APK banao.
-
-No ads. No subscription.
+Ready APK binary yahan nahi hai — source se Studio me banao.
