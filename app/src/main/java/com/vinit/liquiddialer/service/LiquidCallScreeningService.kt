@@ -3,26 +3,22 @@ package com.vinit.liquiddialer.service
 import android.telecom.Call
 import android.telecom.CallScreeningService
 import android.util.Log
+import com.vinit.liquiddialer.data.Prefs
 
-/**
- * Basic call screening. Later: check local block list + simple heuristics.
- */
 class LiquidCallScreeningService : CallScreeningService() {
-
     override fun onScreenCall(callDetails: Call.Details) {
-        val number = callDetails.handle?.schemeSpecificPart
-        Log.d(TAG, "Screening: $number")
+        val number = callDetails.handle?.schemeSpecificPart ?: ""
+        val prefs = Prefs(this)
+        val blocked = prefs.isBlocked(number)
+        Log.d(TAG, "Screen $number blocked=$blocked")
 
         val response = CallResponse.Builder()
-            .setDisallowCall(false)
-            .setRejectCall(false)
+            .setDisallowCall(blocked)
+            .setRejectCall(blocked)
             .setSkipCallLog(false)
-            .setSkipNotification(false)
+            .setSkipNotification(blocked)
             .build()
         respondToCall(callDetails, response)
     }
-
-    companion object {
-        private const val TAG = "LiquidScreening"
-    }
+    companion object { private const val TAG = "LiquidScreening" }
 }
